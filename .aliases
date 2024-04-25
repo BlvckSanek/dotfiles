@@ -1,0 +1,34 @@
+# Shortcuts
+alias ch='history | grep "git commit"'
+alias hg='history | grep'
+alias yt="subl '$HOME/Google Drive/My Drive/YouTube/Scripts/'"
+alias cyt="cd '$HOME/Google Drive/My Drive/YouTube/Scripts/'"
+alias oyt="start '$HOME/Google Drive/My Drive/YouTube/Scripts/'"  # Use `start` to open a file in Windows
+
+# Detect which `ls` flavor is in use
+colorflag="--color=auto"  # Use --color=auto for colorized output on Windows
+alias la="ls -lahF ${colorflag}"
+
+# Always use color output for `ls`
+alias ls="ls ${colorflag}"
+
+# Always enable colored `grep` output
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+# Update/upgrade Homebrew and their installed packages
+# Homebrew is not available on Windows, so this alias won't be useful
+
+# Show/hide hidden files in Explorer
+alias show="explorer /e,.$HOME"
+alias hide="explorer /e,$HOME"
+
+# To prep before screencasts
+# These settings are specific to macOS and won't work on Windows
+# You may need to manually adjust settings on Windows if needed
+
+alias clean='rm -rf ~/.Trash/*; rm -rf ~/Downloads/*'  # This alias should work as expected on Git Bash for Windows
+
+# Virtual Environments
+# These commands are specific to Python virtual environments and should work on Windows with minor adjustments if needed
