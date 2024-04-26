@@ -6,10 +6,12 @@ PS1+="\[${userStyle}\]\u" # username
 PS1+="\[${white}\] at "
 PS1+="\[${hostStyle}\]\h" # host
 PS1+="\[${white}\] in "
-PS1+="\[${green}\]\W" # working directory
+PS1+="\[${green}\]\W$(__git_ps1 "%s")" # working directory and Git branch
 PS1+="\$(prompt_git)" # Git repository details
+PS1+="$(__git_ps1 \"%s\")"
 PS1+="\n"
 PS1+="\[${white}\]\$ \[${reset}\]" # `$` (and reset color)
+
 export PS1
 
 PS2="\[${yellow}\]→ \[${reset}\]"
